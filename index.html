@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b0f19">
+    <title>Stratos Global Holding AZ LLC | Ingegneria e Operations per la Ristorazione</title>
+    <meta name="description" content="Ingegneria per la ristorazione, layout di cucina personalizzati, riadattamento Halal e sistemi POS integrati. Oltre 36 anni di esperienza operativa al servizio della scalabilità globale.">
+    <link rel="canonical" href="https://www.azstratosholding.com/">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23151f45' stroke='%23c5a059' stroke-width='3'/%3E%3Ctext x='50' y='68' font-size='52' font-family='Georgia, serif' font-weight='bold' fill='%23c5a059' text-anchor='middle'%3EAZ%3C/text%3E%3C/svg%3E">
+    <style>
+        :root{--bg-color:#0b0f19;--card-bg:#131b2e;--accent-gold:#c5a059;--accent-gold-hover:#d4af37;--text-main:#f8fafc;--text-muted:#94a3b8;--border-color:#1e293b}
+        *{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+        html{scroll-behavior:smooth}
+        body{background-color:var(--bg-color);color:var(--text-main);line-height:1.6;overflow-x:hidden;width:100%}
+        .skip-link{position:absolute;left:-9999px;top:0;background:var(--accent-gold);color:#0b0f19;padding:0.8rem 1.2rem;z-index:9999;font-weight:700}
+        .skip-link:focus{left:1rem;top:1rem}
+        header{padding:1rem 5%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border-color);background:rgba(11,15,25,0.98);position:sticky;top:0;z-index:100;backdrop-filter:blur(10px);width:100%;gap:1rem}
+        .brand-logo{display:flex;align-items:center;text-decoration:none;gap:12px;flex-shrink:0}
+        .logo-svg{height:48px;width:auto;display:block}
+        .brand-text{font-size:1.1rem;font-weight:800;letter-spacing:1.5px;color:#ffffff;text-transform:uppercase;line-height:1.1}
+        .brand-text .brand-sub{display:block;font-size:0.62rem;letter-spacing:2px;color:var(--accent-gold);font-weight:600}
+        .nav-desktop{display:flex;gap:1.8rem;align-items:center}
+        .nav-desktop a{color:var(--text-muted);text-decoration:none;font-size:0.9rem;font-weight:500;transition:color 0.2s ease}
+        .nav-desktop a:hover{color:var(--accent-gold)}
+        .menu-toggle{display:none;background:none;border:1px solid var(--border-color);color:var(--text-main);font-size:1.4rem;padding:0.3rem 0.7rem;border-radius:4px;cursor:pointer}
+        .nav-mobile{display:none;flex-direction:column;gap:0.5rem;background:var(--card-bg);padding:1rem 1.5rem;border-bottom:1px solid var(--border-color)}
+        .nav-mobile.open{display:flex}
+        .nav-mobile a{color:var(--text-main);text-decoration:none;padding:0.6rem 0;border-bottom:1px solid var(--border-color);font-size:0.95rem}
+        .nav-mobile a:last-child{border-bottom:none}
+        .hero{padding:5rem 5% 4rem 5%;text-align:center;max-width:1200px;margin:0 auto}
+        .hero h1{font-size:2.7rem;font-weight:800;margin-bottom:1.5rem;letter-spacing:-0.5px;color:#ffffff;background:linear-gradient(135deg,#ffffff 30%,#94a3b8 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+        @supports not (background-clip:text){.hero h1{color:#ffffff;-webkit-text-fill-color:#ffffff;background:none}}
+        .hero p{font-size:1.18rem;color:var(--text-muted);margin-bottom:2.5rem;max-width:950px;margin-left:auto;margin-right:auto}
+        .highlight-stat{color:var(--accent-gold);font-weight:700}
+        .cta-group{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+        .btn{padding:0.85rem 1.8rem;font-size:0.95rem;font-weight:600;border-radius:4px;cursor:pointer;transition:all 0.3s ease;text-decoration:none;display:inline-block;border:none;text-align:center}
+        .btn-primary{background-color:var(--accent-gold);color:#0b0f19}
+        .btn-primary:hover{background-color:var(--accent-gold-hover);transform:translateY(-2px)}
+        .btn-secondary{background-color:transparent;color:var(--text-main);border:1px solid var(--border-color)}
+        .btn-secondary:hover{border-color:var(--accent-gold);color:var(--accent-gold)}
+        .section{padding:4.5rem 5%;max-width:1300px;margin:0 auto}
+        .section-title{text-align:center;font-size:2.1rem;margin-bottom:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px}
+        .section-subtitle{text-align:center;color:var(--text-muted);margin-bottom:3rem;font-size:1.05rem;max-width:900px;margin-left:auto;margin-right:auto}
+        .grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(450px,1fr));gap:2rem}
+        .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem}
+        .card{background-color:var(--card-bg);border:1px solid var(--border-color);border-radius:8px;padding:2rem 1.8rem;transition:transform 0.3s ease,border-color 0.3s ease}
+        .card:hover{transform:translateY(-4px);border-color:var(--accent-gold)}
+        .card h3{font-size:1.25rem;margin-bottom:0.9rem;color:var(--accent-gold)}
+        .card p,.card ul{color:var(--text-muted);font-size:0.95rem;margin-bottom:0.8rem}
+        .card ul{list-style:none;padding-left:0}
+        .card ul li{position:relative;padding-left:1.2rem;margin-bottom:0.5rem}
+        .card ul li::before{content:"▹";position:absolute;left:0;color:var(--accent-gold)}
+        .process-step{text-align:center}
+        .process-step .step-num{display:inline-flex;width:60px;height:60px;align-items:center;justify-content:center;background:var(--accent-gold);color:#0b0f19;font-weight:800;font-size:1.5rem;border-radius:50%;margin-bottom:1rem}
+        .process-step h3{color:var(--text-main);font-size:1.1rem;margin-bottom:0.5rem}
+        .process-step p{color:var(--text-muted);font-size:0.9rem}
+        .software-box{background:linear-gradient(145deg,#131b2e,#0b0f19);border:1px solid var(--accent-gold);border-radius:12px;padding:3rem 2rem;margin-top:2rem}
+        .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start}
+        .contact-info p{color:var(--text-muted);margin-bottom:0.8rem;font-size:0.95rem}
+        .contact-info a{color:var(--accent-gold);text-decoration:none;font-weight:600}
+        .contact-info a:hover{text-decoration:underline}
+        .direct-links{display:flex;gap:0.8rem;flex-wrap:wrap;margin-top:1.2rem}
+        .direct-links a{padding:0.6rem 1rem;background:var(--card-bg);border:1px solid var(--border-color);border-radius:4px;color:var(--text-main);font-size:0.85rem;text-decoration:none;transition:all 0.2s ease}
+        .direct-links a:hover{border-color:var(--accent-gold);color:var(--accent-gold)}
+        .modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(7,9,16,0.88);backdrop-filter:blur(8px);z-index:1000;justify-content:center;align-items:center;padding:1.5rem}
+        .modal-overlay.active{display:flex}
+        .modal-card{background-color:var(--card-bg);border:1px solid var(--accent-gold);border-radius:12px;width:100%;max-width:560px;max-height:85vh;overflow-y:auto;padding:2rem;position:relative;box-shadow:0 20px 40px rgba(0,0,0,0.6)}
+        .modal-close{position:absolute;top:1rem;right:1.2rem;font-size:1.8rem;color:var(--text-muted);cursor:pointer;background:none;border:none;line-height:1}
+        .modal-close:hover{color:var(--text-main)}
+        .form-group{margin-bottom:1rem}
+        .form-group label{display:block;margin-bottom:0.3rem;font-size:0.88rem;color:var(--text-main)}
+        .form-control{width:100%;padding:0.75rem 0.9rem;background:#0b0f19;border:1px solid var(--border-color);border-radius:4px;color:var(--text-main);font-size:0.9rem;font-family:inherit}
+        .form-control:focus{outline:2px solid var(--accent-gold);outline-offset:1px;border-color:var(--accent-gold)}
+        .form-status{margin-top:0.8rem;padding:0.7rem;border-radius:4px;font-size:0.85rem;display:none}
+        .form-status.success{display:block;background:#14532d;color:#bbf7d0}
+        .form-status.error{display:block;background:#7f1d1d;color:#fecaca}
+        footer{border-top:1px solid var(--border-color);padding:3.5rem 5% 2rem 5%;background-color:#070910;color:var(--text-muted);font-size:0.9rem;width:100%}
+        .footer-content{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2.5rem;margin-bottom:2.5rem}
+        .footer-col h4{color:var(--text-main);margin-bottom:1rem;font-size:0.98rem}
+        .footer-col a{color:var(--accent-gold);text-decoration:none}
+        .footer-col a:hover{text-decoration:underline}
+        .footer-legal-links{max-width:1300px;margin:0 auto 1.5rem auto;display:flex;gap:1.5rem;flex-wrap:wrap;font-size:0.85rem}
+        .footer-legal-links a{color:var(--text-muted);text-decoration:none}
+        .footer-legal-links a:hover{color:var(--accent-gold)}
+        .disclaimer{max-width:1300px;margin:0 auto;border-top:1px solid var(--border-color);padding-top:1.8rem;font-size:0.78rem;text-align:justify}
+        @media (max-width:900px){.contact-grid{grid-template-columns:1fr}}
+        @media (max-width:768px){.hero h1{font-size:2rem}.grid-2{grid-template-columns:1fr}.modal-card{padding:1.5rem}.nav-desktop{display:none}.menu-toggle{display:block}.brand-text{font-size:0.95rem}.brand-text .brand-sub{font-size:0.55rem}.logo-svg{height:38px}}
+        @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;scroll-behavior:auto !important}.card:hover{transform:none}.btn-primary:hover{transform:none}}
+        a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--accent-gold);outline-offset:2px}
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Salta al contenuto principale</a>
+
+    <header>
+        <a href="#" class="brand-logo" aria-label="Stratos Global Holding - Home">
+            <svg class="logo-svg" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="60" cy="60" r="58" stroke="#c5a059" stroke-width="2" fill="#0b0f19"/>
+                <circle cx="60" cy="60" r="54" stroke="#c5a059" stroke-width="1.5" fill="none"/>
+                <circle cx="60" cy="60" r="42" fill="#151f45" stroke="#c5a059" stroke-width="1.5"/>
+                <path d="M 20 60 Q 25 40 40 25 Q 45 30 42 40 Q 35 45 30 60 Q 35 75 42 80 Q 45 90 40 95 Q 25 80 20 60 Z" fill="#c5a059"/>
+                <path d="M 20 60 Q 25 55 35 50" stroke="#0b0f19" stroke-width="1"/>
+                <path d="M 22 50 Q 28 45 36 40" stroke="#0b0f19" stroke-width="1"/>
+                <path d="M 22 70 Q 28 75 36 80" stroke="#0b0f19" stroke-width="1"/>
+                <path d="M 100 60 Q 95 40 80 25 Q 75 30 78 40 Q 85 45 90 60 Q 85 75 78 80 Q 75 90 80 95 Q 95 80 100 60 Z" fill="#c5a059"/>
+                <path d="M 100 60 Q 95 55 85 50" stroke="#0b0f19" stroke-width="1"/>
+                <path d="M 98 50 Q 92 45 84 40" stroke="#0b0f19" stroke-width="1"/>
+                <path d="M 98 70 Q 92 75 84 80" stroke="#0b0f19" stroke-width="1"/>
+                <path id="textPathTop" d="M 25 60 A 35 35 0 0 1 95 60" fill="none"/>
+                <text font-family="Arial, sans-serif" font-size="7.5" font-weight="700" fill="#f8fafc" letter-spacing="1.5">
+                    <textPath href="#textPathTop" startOffset="50%" text-anchor="middle">STRATOS GLOBAL HOLDING - AZ</textPath>
+                </text>
+                <path id="textPathBottom" d="M 20 60 A 40 40 0 0 0 100 60" fill="none"/>
+                <text font-family="Arial, sans-serif" font-size="7.5" font-weight="700" fill="#f8fafc" letter-spacing="1.5">
+                    <textPath href="#textPathBottom" startOffset="50%" text-anchor="middle">AZ CONSULTING LLC</textPath>
+                </text>
+                <path d="M 42 80 L 55 40 L 60 40 L 73 80 L 66 80 L 63 70 L 52 70 L 49 80 Z M 54 64 L 61 64 L 57.5 50 Z" fill="#c5a059"/>
+                <path d="M 60 45 L 80 45 L 80 50 L 68 65 L 80 65 L 80 70 L 60 70 L 60 65 L 72 50 L 60 50 Z" fill="#c5a059"/>
+            </svg>
+            <div class="brand-text">STRATOS<span class="brand-sub">GLOBAL HOLDING AZ LLC</span></div>
+        </a>
+
+        <nav class="nav-desktop" aria-label="Navigazione principale">
+            <a href="#chi-siamo">Chi Siamo</a>
+            <a href="#servizi">Servizi</a>
+            <a href="#processo">Processo</a>
+            <a href="#software">Software</a>
+            <a href="#contatti">Contatti</a>
+        </nav>
+
+        <button class="btn btn-primary" onclick="openModal('general')" style="padding:0.5rem 1.2rem;font-size:0.85rem;">Contattaci</button>
+        <button class="menu-toggle" onclick="toggleMobileMenu()" aria-label="Apri menu" aria-expanded="false" id="menuToggleBtn">☰</button>
+    </header>
+
+    <nav class="nav-mobile" id="mobileMenu" aria-label="Navigazione mobile">
+        <a href="#chi-siamo" onclick="closeMobileMenu()">Chi Siamo</a>
+        <a href="#servizi" onclick="closeMobileMenu()">Servizi</a>
+        <a href="#processo" onclick="closeMobileMenu()">Processo</a>
+        <a href="#software" onclick="closeMobileMenu()">Software</a>
+        <a href="#contatti" onclick="closeMobileMenu()">Contatti</a>
+    </nav>
+
+    <main id="main-content">
+        <section class="hero">
+            <h1>Ingegneria per la Ristorazione, Layout di Cucina Personalizzati e Sistemi Integrati per la Scalabilità Globale</h1>
+            <p>Trasformiamo oltre <span class="highlight-stat">36 anni di maestria operativa culinaria</span> in ingegneria aziendale ad alto rendimento: ottimizzazione degli spazi, riprogettazione Halal dei classici italiani tradizionali e tecnologia gestionale proprietaria. Risultati target: <span class="highlight-stat">riduzione dei costi operativi dal 4% all'8%</span> in materie prime nei primi 6 mesi, fino a <span class="highlight-stat">un'efficienza operativa del 30%–40% nel lungo periodo</span>.</p>
+            <div class="cta-group">
+                <button class="btn btn-primary" onclick="openModal('advisory')">Richiedi una Consulenza Esecutiva</button>
+                <a href="#software" class="btn btn-secondary">Esplora il Sistema Gestionale</a>
+            </div>
+        </section>
+
+        <section class="section" id="chi-siamo">
+            <h2 class="section-title">CHI SIAMO: SOLUZIONI SUL CAMPO, NON CONSIGLI TEORICI</h2>
+            <p class="section-subtitle">In Stratos Global Holding AZ LLC offriamo ingegneria operativa ad alto impatto, radicata in oltre 36 anni di esperienza attiva nella gastronomia italiana, nelle pizzerie, nei concept regionali e nelle imprese commerciali della ristorazione.</p>
+            <div class="grid-2">
+                <div class="card"><h3>🛠️ Maestria Pratica in Cucina</h3><p>Conosciamo ogni centimetro delle cucine professionali: dalla gestione del carico termico alla logistica dei flussi di lavoro durante le ore di punta. La nostra missione è eliminare gli sprechi strutturali, razionalizzare i layout ergonomici e progettare operazioni redditizie e senza attriti.</p></div>
+                <div class="card"><h3>🌐 Governance e Conformità Globale</h3><p>Costituita negli Stati Uniti (Wyoming) e operativa a livello globale, manteniamo una rigorosa conformità aziendale, contratti legali chiari e un supporto esecutivo multicanale nei mercati del Medio Oriente (GCC), dell'Asia Centrale e dell'Europa.</p></div>
+            </div>
+        </section>
+
+        <section class="section" id="servizi" style="background-color:rgba(19,27,46,0.3);">
+            <h2 class="section-title">SERVIZI E SOLUZIONI PRINCIPALI</h2>
+            <p class="section-subtitle">Un framework end-to-end che combina ingegneria ergonomica del layout di cucina, adattamento Halal del menù e un rigoroso controllo dei margini.</p>
+            <div class="grid-3">
+                <div class="card"><h3>📐 1. Progettazione Layout e Ingegneria di Cucina</h3><ul><li><strong>Ottimizzazione degli Spazi:</strong> Riprogettazione delle planimetrie per cucine calde, pizzerie artigianali, piadinerie e beverage bar.</li><li><strong>Strategia Hardware Snella:</strong> Identificazione ed eliminazione delle attrezzature superflue per ridurre i costi iniziali (CapEx) e i consumi energetici.</li><li><strong>Flussi di Lavoro Ergonomici:</strong> Percorsi fluidi tra il personale di sala e le brigate di cucina per massimizzare la velocità produttiva.</li></ul></div>
+                <div class="card"><h3>🥩 2. Eccellenza Italiana e Riadattamento Halal</h3><ul><li><strong>Conformità GCC e Mercati Islamici:</strong> Riprogettazione dei classici della cucina italiana (ragù tradizionali, lasagne, arancini, impasti artigianali e salse) in formati 100% Halal, senza compromettere il sapore autentico o l'identità culinaria.</li><li><strong>Ingegneria dei Margini:</strong> Ristrutturazione dei modelli di menu engineering per massimizzare la redditività lorda per piatto e comprimere i costi alimentari.</li></ul></div>
+                <div class="card"><h3>⚡ 3. Risoluzione dei Problemi Operativi</h3><ul><li><strong>Standardizzazione delle Ricette:</strong> Implementazione di guide di resa rigorose e procedure operative standardizzate (SOP).</li><li><strong>Formazione delle Brigate:</strong> Formazione pratica del personale per eliminare gli sprechi di materie prime e razionalizzare le routine di preparazione.</li></ul></div>
+            </div>
+        </section>
+
+        <section class="section" id="processo">
+            <h2 class="section-title">COME LAVORIAMO</h2>
+            <p class="section-subtitle">Un metodo collaudato in cinque fasi per trasformare la tua visione in un'operazione efficiente e profittevole.</p>
+            <div class="grid-3">
+                <div class="process-step"><div class="step-num">1</div><h3>Discovery</h3><p>Analisi del concept, del target di mercato e degli obiettivi finanziari.</p></div>
+                <div class="process-step"><div class="step-num">2</div><h3>Audit Operativo</h3><p>Valutazione sul campo di spazi, attrezzature, flussi e criticità.</p></div>
+                <div class="process-step"><div class="step-num">3</div><h3>Design & Engineering</h3><p>Planimetrie, menu engineering, adattamento Halal e SOP.</p></div>
+                <div class="process-step"><div class="step-num">4</div><h3>Implementazione</h3><p>Formazione delle brigate, deployment del sistema POS e go-live.</p></div>
+                <div class="process-step"><div class="step-num">5</div><h3>Monitoraggio</h3><p>KPI, dashboard finanziarie e ottimizzazione continua dei margini.</p></div>
+                <div class="process-step"><div class="step-num">✓</div><h3>Risultati</h3><p>Riduzione dei costi, aumento dell'efficienza e scalabilità globale.</p></div>
+            </div>
+        </section>
+
+        <section class="section" id="software">
+            <div class="software-box">
+                <h2 class="section-title" style="color:var(--accent-gold);margin-bottom:0.5rem;">STRATOS POS ED ECOSISTEMA</h2>
+                <p style="text-align:center;color:var(--text-main);font-size:1.15rem;margin-bottom:2rem;">Nucleo Operativo Integrato — Alimentato da Sistemi Modulari Attivi</p>
+                <p style="text-align:center;color:var(--text-muted);max-width:800px;margin:0 auto 3rem auto;">Andiamo oltre l'ingegneria dei layout: forniamo un sistema digitale chiavi in mano, pensato per ristoranti, pizzerie e attività di ristorazione, per governare le performance in tempo reale senza costi hardware superflui.</p>
+                <div class="grid-2">
+                    <div class="card" style="background:rgba(11,15,25,0.6);"><h3>📱 Instradamento Fluido Sala-Cucina</h3><p>Il personale di sala registra gli ordini su dispositivi mobili o tablet. Gli ordini vengono visualizzati istantaneamente su schermi dedicati Kitchen Display System (KDS) nelle varie postazioni (linea calda, pizzeria, bar).</p></div>
+                    <div class="card" style="background:rgba(11,15,25,0.6);"><h3>📦 Controllo delle Scorte in Tempo Reale</h3><p>Ogni articolo venduto scala automaticamente le materie prime esatte dall'inventario live, attivando avvisi automatici di riordino prima che si verifichino rotture di stock.</p></div>
+                    <div class="card" style="background:rgba(11,15,25,0.6);"><h3>📊 Dashboard Finanziaria e Analisi</h3><p>Monitora ricavi, margini netti e costi giornalieri di manodopera e OpEx in qualsiasi momento, da qualsiasi interfaccia desktop o mobile.</p></div>
+                    <div class="card" style="background:rgba(11,15,25,0.6);"><h3>💳 Cassa Integrata e Gestione Tavoli</h3><p>Accelera la rotazione dei tavoli, dividi i conti ed esegui le riconciliazioni giornaliere di cassa senza alcun errore umano.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">PERCHÉ SCEGLIERE STRATOS GLOBAL HOLDING</h2>
+            <p class="section-subtitle">Un unico partner strategico che gestisce la tua espansione dalla progettazione del layout al deployment del software.</p>
+            <div class="grid-3" style="margin-bottom:4rem;">
+                <div class="card"><h3>✔️ Track Record Comprovato</h3><p>Decenni di esecuzione pratica in sala, in pizzeria e in cucina, non modelli gestionali teorici.</p></div>
+                <div class="card"><h3>🌍 Esecuzione Transfrontaliera</h3><p>Capacità di negoziazione diretta nei panorami imprenditoriali del Medio Oriente, dell'Asia Centrale e dell'Europa.</p></div>
+                <div class="card"><h3>🔑 Soluzioni Chiavi in Mano</h3><p>Project management end-to-end che copre layout di cucina, menu engineering e infrastruttura digitale sotto un unico ombrello.</p></div>
+            </div>
+            <div style="background:var(--card-bg);border:1px solid var(--accent-gold);border-radius:12px;padding:3rem 2rem;text-align:center;">
+                <h2 style="font-size:1.8rem;margin-bottom:1rem;">Accedi al Portale di Intake Esecutivo</h2>
+                <p style="color:var(--text-muted);max-width:700px;margin:0 auto 2rem auto;">Per garantire il massimo impegno operativo, valutiamo tutte le proposte clienti in arrivo attraverso un rigoroso processo di pre-qualifica del ROI prima di avviare audit dettagliati.</p>
+                <button class="btn btn-primary" onclick="openModal('general')">Avvia il Processo di Pre-Qualifica</button>
+            </div>
+        </section>
+
+        <section class="section" id="contatti">
+            <h2 class="section-title">CONTATTI</h2>
+            <p class="section-subtitle">Siamo a disposizione per consulenze strategiche, partnership e informazioni commerciali.</p>
+            <div class="contact-grid">
+                <div class="card contact-info">
+                    <h3>Sede Legale e Operativa</h3>
+                    <p>30 N Gould St Ste B<br>Sheridan, WY 82801, USA</p>
+                    <p style="margin-top:1rem;"><strong>Email:</strong> <a href="mailto:contact@azstratosholding.com">contact@azstratosholding.com</a></p>
+                    <p><strong>Telefono:</strong> <a href="tel:+13074359760">+1 (307) 435 9760</a></p>
+                    <div class="direct-links">
+                        <a href="mailto:legal@azstratosholding.com">Legale</a>
+                        <a href="mailto:advisory@azstratosholding.com">Consulenza</a>
+                        <a href="mailto:tech@azstratosholding.com">Tecnico</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Richiedi una Consulenza</h3>
+                    <p style="margin-bottom:1.5rem;">Compila il modulo per essere ricontattato dal nostro team esecutivo entro 24-48 ore lavorative.</p>
+                    <button class="btn btn-primary" onclick="openModal('general')" style="width:100%;">Apri il Modulo di Contatto</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal-overlay" id="intakeModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-card">
+            <button class="modal-close" onclick="closeModal()" aria-label="Chiudi">&times;</button>
+            <h3 id="modalTitle" style="color:var(--accent-gold);margin-bottom:0.3rem;font-size:1.3rem;">STRATOS GLOBAL HOLDING</h3>
+            <p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:1.2rem;">Portale di Intake Esecutivo</p>
+            
+            <form id="routingForm" action="https://formsubmit.co/contact@azstratosholding.com" method="POST">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://tuonome.github.io/stratos/">
+                
+                <div class="form-group">
+                    <label for="deptSelect">Dipartimento Destinatario</label>
+                    <select id="deptSelect" name="Dipartimento" class="form-control" required>
+                        <option value="advisory">Consulenza Esecutiva e Ingegneria di Cucina</option>
+                        <option value="legal">Legale e Conformità Aziendale</option>
+                        <option value="tech">Supporto Tecnico e Operativo</option>
+                        <option value="general">Governance Generale e Informazioni</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="fullName">Nome e Cognome</label>
+                    <input type="text" id="fullName" name="Nome" class="form-control" placeholder="es. Mario Rossi" required>
+                </div>
+                <div class="form-group">
+                    <label for="company">Azienda e Nome del Brand</label>
+                    <input type="text" id="company" name="Azienda" class="form-control" placeholder="es. Global Restaurant Group LLC" required>
+                </div>
+                <div class="form-group">
+                    <label for="userEmail">Indirizzo Email Aziendale</label>
+                    <input type="email" id="userEmail" name="Email" class="form-control" placeholder="nome@azienda.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Panoramica del Progetto</label>
+                    <textarea id="message" name="Messaggio" class="form-control" rows="4" placeholder="Descrivi brevemente le esigenze operative o la richiesta di consulenza..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width:100%;margin-top:0.5rem;">Invia Richiesta</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>Stratos Global Holding AZ LLC</h4>
+                <p>Ingegneria avanzata per la ristorazione, ottimizzazione dei flussi di cucina e soluzioni POS intelligenti per la scalabilità globale.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contatti Rapidi</h4>
+                <p>Email: <a href="mailto:contact@azstratosholding.com">contact@azstratosholding.com</a></p>
+                <p>Tel: <a href="tel:+13074359760">+1 (307) 435 9760</a></p>
+                <p>Sede: Sheridan, Wyoming, USA</p>
+            </div>
+        </div>
+        <div class="footer-legal-links">
+            <a href="mailto:legal@azstratosholding.com">Termini di Servizio</a>
+            <a href="mailto:legal@azstratosholding.com">Informativa sulla Privacy</a>
+            <a href="mailto:legal@azstratosholding.com">Conformità e Note Legali</a>
+        </div>
+        <div class="disclaimer">
+            &copy; 2026 Stratos Global Holding AZ LLC. Tutti i diritti riservati. Costituita nel Wyoming, USA. I servizi di consulenza ingegneristica, ottimizzazione dei layout di cucina e integrazione dei sistemi POS sono forniti su base contrattuale specifica previa pre-qualifica del ROI. I marchi, i loghi e i contenuti tecnici presenti in questo sito sono di proprietà esclusiva di Stratos Global Holding AZ LLC.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu(){
+            const menu = document.getElementById('mobileMenu');
+            const btn = document.getElementById('menuToggleBtn');
+            const isOpen = menu.classList.toggle('open');
+            btn.setAttribute('aria-expanded', isOpen);
+        }
+        function closeMobileMenu(){
+            const menu = document.getElementById('mobileMenu');
+            const btn = document.getElementById('menuToggleBtn');
+            menu.classList.remove('open');
+            btn.setAttribute('aria-expanded', 'false');
+        }
+        function openModal(dept){
+            const modal = document.getElementById('intakeModal');
+            const select = document.getElementById('deptSelect');
+            if(select && dept){ select.value = dept; }
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal(){
+            const modal = document.getElementById('intakeModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+        window.onclick = function(event){
+            const modal = document.getElementById('intakeModal');
+            if(event.target === modal){ closeModal(); }
+        }
+    </script>
+</body>
+</html>
