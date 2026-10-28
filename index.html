@@ -6,11 +6,10 @@
     <title>Stratos Global Holding AZ LLC | Foodservice Engineering & Operations</title>
     
     <!-- SEO & Open Graph -->
-    <meta name="description" content="Foodservice engineering, custom kitchen layouts, and Halal re-engineering for global scaling. 36 years of operational mastery.">
+    <meta name="description" content="Foodservice engineering, custom kitchen layouts, and Halal re-engineering for global scaling.">
     <meta property="og:title" content="Stratos Global | Foodservice Engineering & Operations">
     <meta property="og:description" content="Transforming 36 years of culinary mastery into high-yield business engineering.">
     <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
 
     <style>
         :root {
@@ -21,6 +20,10 @@
             --text-main: #f8fafc;
             --text-muted: #94a3b8;
             --border-color: #1e293b;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         * {
@@ -72,29 +75,25 @@
             font-weight: 600;
         }
 
-        /* SFONDO HERO TECNICO E SFUMATO */
         .hero {
             position: relative;
-            padding: 7rem 5% 5rem 5%;
+            padding: 6rem 5% 4rem 5%;
             text-align: center;
             max-width: 1200px;
             margin: 0 auto;
-            background: radial-gradient(circle at top center, rgba(197, 160, 89, 0.08) 0%, rgba(11, 15, 25, 0) 70%);
+            z-index: 1;
         }
 
-        /* Griglia tecnica sullo sfondo */
         .hero::before {
             content: "";
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background-image: 
-                linear-gradient(rgba(30, 41, 59, 0.3) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(30, 41, 59, 0.3) 1px, transparent 1px);
-            background-size: 40px 40px;
+            background-image: url('https://images.unsplash.com/photo-1556910103-1c02745a872f?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            filter: blur(5px) brightness(0.25);
             z-index: -1;
-            mask-image: linear-gradient(to bottom, black 20%, transparent 100%);
-            -webkit-mask-image: linear-gradient(to bottom, black 20%, transparent 100%);
-            pointer-events: none;
+            border-bottom: 1px solid var(--border-color);
         }
 
         .hero h1 {
@@ -188,13 +187,13 @@
 
         .grid-2 {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(100%, 450px), 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
             gap: 2rem;
         }
 
         .grid-3 {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
         }
 
@@ -209,7 +208,6 @@
         .card:hover {
             transform: translateY(-4px);
             border-color: var(--accent-gold);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
         }
 
         .card h3 {
@@ -354,7 +352,17 @@
             font-size: 0.98rem;
         }
 
-        /* TELEFONO IN ORO NEL FOOTER */
+        .footer-col a {
+            color: var(--accent-gold);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-col a:hover {
+            color: var(--accent-gold-hover);
+            text-decoration: underline;
+        }
+
         .gold-phone {
             color: var(--accent-gold);
             font-weight: 700;
@@ -374,21 +382,24 @@
 
         @media (max-width: 768px) {
             .hero h1 { font-size: 2rem; }
+            .grid-2 { grid-template-columns: 1fr; }
             .modal-card { padding: 1.5rem; }
         }
     </style>
 </head>
 <body>
 
+    <!-- HEADER CON LOGO ORIGINALE -->
     <header>
         <div class="brand-logo">
             <div class="brand-text">STRATOS <span>GLOBAL HOLDING AZ LLC</span></div>
         </div>
-        <button class="btn btn-primary" onclick="openModal('general')" style="padding: 0.5rem 1.2rem; font-size: 0.85rem;">Request Access</button>
+        <button class="btn btn-primary" onclick="openModal('general')" style="padding: 0.5rem 1.2rem; font-size: 0.85rem;" aria-label="Request Access">Request Access</button>
     </header>
 
+    <!-- HERO CON SFONDO -->
     <section class="hero">
-        <h1>Foodservice Engineering, Custom Kitchen Layouts & Integrated Systems</h1>
+        <h1>Foodservice Engineering, Custom Kitchen Layouts & Integrated Systems for Global Scaling</h1>
         <p>Transforming over <span class="highlight-stat">36 years of operational culinary mastery</span> into high-yield business engineering: spatial optimization, Halal re-engineering of traditional Italian classics, and proprietary management technology. Target results: <span class="highlight-stat">4% to 8% OpEx reduction</span> in raw materials within the first 6 months, scaling to <span class="highlight-stat">30% to 40% long-term operational efficiency</span>.</p>
         <div class="cta-group">
             <button class="btn btn-primary" onclick="openModal('advisory')">Request Executive Consultation</button>
@@ -399,7 +410,7 @@
     <!-- SECTION 1: ABOUT US -->
     <section class="section">
         <h2 class="section-title">ABOUT US: FIELD-TESTED SOLUTIONS, NOT THEORETICAL ADVICE</h2>
-        <p class="section-subtitle">At Stratos Global, we deliver high-impact operational engineering rooted in over 36 years of active expertise across Italian gastronomy, pizzerias, regional concepts, and commercial foodservice enterprises.</p>
+        <p class="section-subtitle">At Stratos Global Holding AZ LLC, we deliver high-impact operational engineering rooted in over 36 years of active expertise across Italian gastronomy, pizzerias, regional concepts, and commercial foodservice enterprises.</p>
         
         <div class="grid-2">
             <div class="card">
@@ -474,7 +485,7 @@
 
     <!-- SECTION 4: WHY CHOOSE STRATOS GLOBAL HOLDING -->
     <section class="section">
-        <h2 class="section-title">WHY PARTNER WITH STRATOS GLOBAL</h2>
+        <h2 class="section-title">WHY PARTNER WITH STRATOS GLOBAL HOLDING</h2>
         <p class="section-subtitle">A single strategic holding partner handling your expansion from blueprint design to software deployment.</p>
         <div class="grid-3" style="margin-bottom: 4rem;">
             <div class="card">
@@ -499,24 +510,25 @@
         </div>
     </section>
 
-    <!-- POP-UP MODAL (EXECUTIVE INTAKE PORTAL) -->
-    <div class="modal-overlay" id="intakeModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <!-- POP-UP MODAL -->
+    <div class="modal-overlay" id="intakeModal">
         <div class="modal-card">
             <button class="modal-close" onclick="closeModal()" aria-label="Close modal">&times;</button>
-            <h3 id="modalTitle" style="color: var(--accent-gold); margin-bottom: 0.3rem; font-size: 1.3rem;">STRATOS GLOBAL</h3>
+            <h3 style="color: var(--accent-gold); margin-bottom: 0.3rem; font-size: 1.3rem;">STRATOS GLOBAL HOLDING</h3>
             <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1.2rem;">Executive Intake & Departmental Routing Portal</p>
             
             <form id="routingForm" onsubmit="handleFormSubmit(event)">
-                <!-- Web3Forms Key -->
                 <input type="hidden" name="access_key" value="cf5240a3-364d-45e6-b82f-ecab33b1e3f5">
+                <!-- Honeypot Antispam -->
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                 
                 <div class="form-group">
                     <label for="deptSelect">Target Department</label>
                     <select id="deptSelect" name="Department" class="form-control" required>
-                        <option value="advisory">Executive Advisory & Kitchen Engineering</option>
-                        <option value="legal">Legal & Corporate Compliance</option>
-                        <option value="tech">Tech & Operations Support</option>
-                        <option value="general">General Governance & Inquiries</option>
+                        <option value="advisory">Executive Advisory & Kitchen Engineering (advisory@azstratosholding.com)</option>
+                        <option value="legal">Legal & Corporate Compliance (legal@azstratosholding.com)</option>
+                        <option value="tech">Tech & Operations Support (tech@azstratosholding.com)</option>
+                        <option value="general">General Governance & Inquiries (contact@azstratosholding.com)</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -537,13 +549,12 @@
                 </div>
                 
                 <button type="submit" id="submitBtn" class="btn btn-primary" style="width: 100%; margin-top: 0.8rem; padding: 0.8rem;">Submit Pre-Qualification Request</button>
-                
-                <!-- Messaggio di stato per l'utente -->
                 <div id="formStatus"></div>
             </form>
         </div>
     </div>
 
+    <!-- FOOTER CON TELEFONO ED EMAIL DORATI -->
     <footer>
         <div class="footer-content">
             <div class="footer-col">
@@ -557,15 +568,14 @@
             <div class="footer-col">
                 <h4>Departments & Direct Emails</h4>
                 <p>
-                    Legal: legal@azstratosholding.com<br>
-                    Advisory: advisory@azstratosholding.com<br>
-                    Tech: tech@azstratosholding.com<br>
-                    General: contact@azstratosholding.com
+                    Legal: <a href="mailto:legal@azstratosholding.com">legal@azstratosholding.com</a><br>
+                    Advisory: <a href="mailto:advisory@azstratosholding.com">advisory@azstratosholding.com</a><br>
+                    Tech: <a href="mailto:tech@azstratosholding.com">tech@azstratosholding.com</a><br>
+                    General: <a href="mailto:contact@azstratosholding.com">contact@azstratosholding.com</a>
                 </p>
             </div>
             <div class="footer-col">
                 <h4>Executive Telephone System</h4>
-                <!-- TELEFONO IN ORO -->
                 <p class="gold-phone">+1 (307) 435 9760</p>
                 <p>Guaranteed callback within <strong>24 to 48 business hours</strong>.</p>
             </div>
@@ -576,30 +586,24 @@
     </footer>
 
     <script>
-        // Chiusura con tasto ESC
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                closeModal();
-            }
-        });
-
         function openModal(defaultDept) {
             document.getElementById('intakeModal').style.display = 'flex';
-            
-            // Reset form status
-            document.getElementById('formStatus').style.display = 'none';
-            document.getElementById('formStatus').className = '';
-            document.getElementById('routingForm').reset();
-            
-            // Se c'è un reparto pre-selezionato, rimettilo
             if(defaultDept) {
                 document.getElementById('deptSelect').value = defaultDept;
             }
+            document.getElementById('formStatus').style.display = 'none';
+            document.getElementById('formStatus').className = '';
         }
 
         function closeModal() {
             document.getElementById('intakeModal').style.display = 'none';
         }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
 
         window.onclick = function(event) {
             var modal = document.getElementById('intakeModal');
@@ -616,7 +620,6 @@
             var statusDiv = document.getElementById('formStatus');
             var formData = new FormData(form);
 
-            // UI: Stato di caricamento
             submitBtn.disabled = true;
             submitBtn.innerText = "Invio in corso...";
             statusDiv.style.display = 'none';
@@ -630,30 +633,24 @@
                 var data = await response.json();
 
                 if (data.success) {
-                    // Successo
                     statusDiv.style.display = 'block';
                     statusDiv.className = 'status-success';
                     statusDiv.innerText = "Richiesta inviata con successo! Ti ricontatteremo entro 24-48 ore.";
-                    
                     form.reset();
                     
-                    // Chiudi la modale dopo 3 secondi
                     setTimeout(function() {
                         closeModal();
                         statusDiv.style.display = 'none';
                     }, 3000);
                 } else {
-                    // Errore dal server
                     throw new Error(data.message || "Errore durante l'invio.");
                 }
             } catch (error) {
-                // Errore di rete o altro
                 statusDiv.style.display = 'block';
                 statusDiv.className = 'status-error';
                 statusDiv.innerText = "Si è verificato un errore. Riprova o contattaci via email.";
                 console.error(error);
             } finally {
-                // Ripristina il bottone in ogni caso
                 submitBtn.disabled = false;
                 submitBtn.innerText = "Submit Pre-Qualification Request";
             }
