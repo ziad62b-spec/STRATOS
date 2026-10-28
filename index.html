@@ -1,311 +1,532 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#0b0f19">
-    <title>Stratos Global Holding AZ LLC | Ingegneria e Operations per la Ristorazione</title>
-    <meta name="description" content="Ingegneria per la ristorazione, layout di cucina personalizzati, riadattamento Halal e sistemi POS integrati. Oltre 36 anni di esperienza operativa al servizio della scalabilità globale.">
-    <link rel="canonical" href="https://www.azstratosholding.com/">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23151f45' stroke='%23c5a059' stroke-width='3'/%3E%3Ctext x='50' y='68' font-size='52' font-family='Georgia, serif' font-weight='bold' fill='%23c5a059' text-anchor='middle'%3EAZ%3C/text%3E%3C/svg%3E">
-    <style>
-        :root{--bg-color:#0b0f19;--card-bg:#131b2e;--accent-gold:#c5a059;--accent-gold-hover:#d4af37;--text-main:#f8fafc;--text-muted:#94a3b8;--border-color:#1e293b}
-        *{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
-        html{scroll-behavior:smooth}
-        body{background-color:var(--bg-color);color:var(--text-main);line-height:1.6;overflow-x:hidden;width:100%}
-        .skip-link{position:absolute;left:-9999px;top:0;background:var(--accent-gold);color:#0b0f19;padding:0.8rem 1.2rem;z-index:9999;font-weight:700}
-        .skip-link:focus{left:1rem;top:1rem}
-        header{padding:1rem 5%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border-color);background:rgba(11,15,25,0.98);position:sticky;top:0;z-index:100;backdrop-filter:blur(10px);width:100%;gap:1rem}
-        .brand-logo{display:flex;align-items:center;text-decoration:none;gap:12px;flex-shrink:0}
-        .logo-svg{height:48px;width:auto;display:block}
-        .brand-text{font-size:1.1rem;font-weight:800;letter-spacing:1.5px;color:#ffffff;text-transform:uppercase;line-height:1.1}
-        .brand-text .brand-sub{display:block;font-size:0.62rem;letter-spacing:2px;color:var(--accent-gold);font-weight:600}
-        .nav-desktop{display:flex;gap:1.8rem;align-items:center}
-        .nav-desktop a{color:var(--text-muted);text-decoration:none;font-size:0.9rem;font-weight:500;transition:color 0.2s ease}
-        .nav-desktop a:hover{color:var(--accent-gold)}
-        .menu-toggle{display:none;background:none;border:1px solid var(--border-color);color:var(--text-main);font-size:1.4rem;padding:0.3rem 0.7rem;border-radius:4px;cursor:pointer}
-        .nav-mobile{display:none;flex-direction:column;gap:0.5rem;background:var(--card-bg);padding:1rem 1.5rem;border-bottom:1px solid var(--border-color)}
-        .nav-mobile.open{display:flex}
-        .nav-mobile a{color:var(--text-main);text-decoration:none;padding:0.6rem 0;border-bottom:1px solid var(--border-color);font-size:0.95rem}
-        .nav-mobile a:last-child{border-bottom:none}
-        .hero{padding:5rem 5% 4rem 5%;text-align:center;max-width:1200px;margin:0 auto}
-        .hero h1{font-size:2.7rem;font-weight:800;margin-bottom:1.5rem;letter-spacing:-0.5px;color:#ffffff;background:linear-gradient(135deg,#ffffff 30%,#94a3b8 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-        @supports not (background-clip:text){.hero h1{color:#ffffff;-webkit-text-fill-color:#ffffff;background:none}}
-        .hero p{font-size:1.18rem;color:var(--text-muted);margin-bottom:2.5rem;max-width:950px;margin-left:auto;margin-right:auto}
-        .highlight-stat{color:var(--accent-gold);font-weight:700}
-        .cta-group{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
-        .btn{padding:0.85rem 1.8rem;font-size:0.95rem;font-weight:600;border-radius:4px;cursor:pointer;transition:all 0.3s ease;text-decoration:none;display:inline-block;border:none;text-align:center}
-        .btn-primary{background-color:var(--accent-gold);color:#0b0f19}
-        .btn-primary:hover{background-color:var(--accent-gold-hover);transform:translateY(-2px)}
-        .btn-secondary{background-color:transparent;color:var(--text-main);border:1px solid var(--border-color)}
-        .btn-secondary:hover{border-color:var(--accent-gold);color:var(--accent-gold)}
-        .section{padding:4.5rem 5%;max-width:1300px;margin:0 auto}
-        .section-title{text-align:center;font-size:2.1rem;margin-bottom:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px}
-        .section-subtitle{text-align:center;color:var(--text-muted);margin-bottom:3rem;font-size:1.05rem;max-width:900px;margin-left:auto;margin-right:auto}
-        .grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(450px,1fr));gap:2rem}
-        .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem}
-        .card{background-color:var(--card-bg);border:1px solid var(--border-color);border-radius:8px;padding:2rem 1.8rem;transition:transform 0.3s ease,border-color 0.3s ease}
-        .card:hover{transform:translateY(-4px);border-color:var(--accent-gold)}
-        .card h3{font-size:1.25rem;margin-bottom:0.9rem;color:var(--accent-gold)}
-        .card p,.card ul{color:var(--text-muted);font-size:0.95rem;margin-bottom:0.8rem}
-        .card ul{list-style:none;padding-left:0}
-        .card ul li{position:relative;padding-left:1.2rem;margin-bottom:0.5rem}
-        .card ul li::before{content:"▹";position:absolute;left:0;color:var(--accent-gold)}
-        .process-step{text-align:center}
-        .process-step .step-num{display:inline-flex;width:60px;height:60px;align-items:center;justify-content:center;background:var(--accent-gold);color:#0b0f19;font-weight:800;font-size:1.5rem;border-radius:50%;margin-bottom:1rem}
-        .process-step h3{color:var(--text-main);font-size:1.1rem;margin-bottom:0.5rem}
-        .process-step p{color:var(--text-muted);font-size:0.9rem}
-        .software-box{background:linear-gradient(145deg,#131b2e,#0b0f19);border:1px solid var(--accent-gold);border-radius:12px;padding:3rem 2rem;margin-top:2rem}
-        .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start}
-        .contact-info p{color:var(--text-muted);margin-bottom:0.8rem;font-size:0.95rem}
-        .contact-info a{color:var(--accent-gold);text-decoration:none;font-weight:600}
-        .contact-info a:hover{text-decoration:underline}
-        .direct-links{display:flex;gap:0.8rem;flex-wrap:wrap;margin-top:1.2rem}
-        .direct-links a{padding:0.6rem 1rem;background:var(--card-bg);border:1px solid var(--border-color);border-radius:4px;color:var(--text-main);font-size:0.85rem;text-decoration:none;transition:all 0.2s ease}
-        .direct-links a:hover{border-color:var(--accent-gold);color:var(--accent-gold)}
-        
-        /* CASE STUDY / RISULTATI */
-        .case-badge{display:inline-block;background:rgba(197,160,89,0.15);color:var(--accent-gold);padding:0.3rem 0.8rem;border-radius:20px;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:1rem}
-        .case-metric{font-size:2rem;font-weight:800;color:var(--text-main);margin-bottom:0.2rem;line-height:1}
-        .case-metric span{color:var(--accent-gold);font-size:1rem;font-weight:600}
-        .privacy-note{background:var(--card-bg);border-left:3px solid var(--accent-gold);padding:1.2rem 1.5rem;border-radius:0 8px 8px 0;font-size:0.85rem;color:var(--text-muted);margin-top:3rem;text-align:center}
-        .privacy-note strong{color:var(--text-main)}
+    <title>Stratos Global | Foodservice Engineering & Operations</title>
+    
+    <!-- SEO & Open Graph -->
+    <meta name="description" content="Foodservice engineering, custom kitchen layouts, and Halal re-engineering for global scaling. 36 years of operational mastery.">
+    <meta property="og:title" content="Stratos Global | Foodservice Engineering & Operations">
+    <meta property="og:description" content="Transforming 36 years of culinary mastery into high-yield business engineering.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
 
-        .modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(7,9,16,0.88);backdrop-filter:blur(8px);z-index:1000;justify-content:center;align-items:center;padding:1.5rem}
-        .modal-overlay.active{display:flex}
-        .modal-card{background-color:var(--card-bg);border:1px solid var(--accent-gold);border-radius:12px;width:100%;max-width:560px;max-height:85vh;overflow-y:auto;padding:2rem;position:relative;box-shadow:0 20px 40px rgba(0,0,0,0.6)}
-        .modal-close{position:absolute;top:1rem;right:1.2rem;font-size:1.8rem;color:var(--text-muted);cursor:pointer;background:none;border:none;line-height:1}
-        .modal-close:hover{color:var(--text-main)}
-        .form-group{margin-bottom:1rem}
-        .form-group label{display:block;margin-bottom:0.3rem;font-size:0.88rem;color:var(--text-main)}
-        .form-control{width:100%;padding:0.75rem 0.9rem;background:#0b0f19;border:1px solid var(--border-color);border-radius:4px;color:var(--text-main);font-size:0.9rem;font-family:inherit}
-        .form-control:focus{outline:2px solid var(--accent-gold);outline-offset:1px;border-color:var(--accent-gold)}
-        footer{border-top:1px solid var(--border-color);padding:3.5rem 5% 2rem 5%;background-color:#070910;color:var(--text-muted);font-size:0.9rem;width:100%}
-        .footer-content{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2.5rem;margin-bottom:2.5rem}
-        .footer-col h4{color:var(--text-main);margin-bottom:1rem;font-size:0.98rem}
-        .footer-col a{color:var(--accent-gold);text-decoration:none}
-        .footer-col a:hover{text-decoration:underline}
-        .footer-legal-links{max-width:1300px;margin:0 auto 1.5rem auto;display:flex;gap:1.5rem;flex-wrap:wrap;font-size:0.85rem}
-        .footer-legal-links a{color:var(--text-muted);text-decoration:none}
-        .footer-legal-links a:hover{color:var(--accent-gold)}
-        .disclaimer{max-width:1300px;margin:0 auto;border-top:1px solid var(--border-color);padding-top:1.8rem;font-size:0.78rem;text-align:justify}
-        @media (max-width:900px){.contact-grid{grid-template-columns:1fr}}
-        @media (max-width:768px){.hero h1{font-size:2rem}.grid-2{grid-template-columns:1fr}.modal-card{padding:1.5rem}.nav-desktop{display:none}.menu-toggle{display:block}.brand-text{font-size:0.95rem}.brand-text .brand-sub{font-size:0.55rem}.logo-svg{height:38px}}
-        @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;scroll-behavior:auto !important}.card:hover{transform:none}.btn-primary:hover{transform:none}}
-        a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--accent-gold);outline-offset:2px}
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: #131b2e;
+            --accent-gold: #c5a059;
+            --accent-gold-hover: #d4af37;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: #1e293b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        header {
+            padding: 1.2rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+            background: rgba(11, 15, 25, 0.98);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            width: 100%;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            gap: 10px;
+        }
+
+        .brand-text {
+            font-size: 1.15rem;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+
+        .brand-text span {
+            color: var(--accent-gold);
+            font-weight: 600;
+        }
+
+        .hero {
+            position: relative;
+            padding: 7rem 5% 5rem 5%;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Immagine di sfondo sfocata per l'hero */
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url('https://images.unsplash.com/photo-1556910103-1c02745a872f?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            filter: blur(8px) brightness(0.2);
+            z-index: -1;
+            border-radius: 0 0 20px 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.7rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #ffffff 30%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.18rem;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+            max-width: 950px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .highlight-stat {
+            color: var(--accent-gold);
+            font-weight: 700;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.85rem 1.8rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-gold);
+            color: #0b0f19;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-gold-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent-gold);
+            color: var(--accent-gold);
+        }
+
+        .section {
+            padding: 4.5rem 5%;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.1rem;
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 3rem;
+            font-size: 1.05rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 450px), 1fr));
+            gap: 2rem;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2rem 1.8rem;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-gold);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.9rem;
+            color: var(--accent-gold);
+        }
+
+        .card p, .card ul {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .card ul li {
+            position: relative;
+            padding-left: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card ul li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--accent-gold);
+        }
+
+        .software-box {
+            background: linear-gradient(145deg, #131b2e, #0b0f19);
+            border: 1px solid var(--accent-gold);
+            border-radius: 12px;
+            padding: 3rem 2rem;
+            margin-top: 2rem;
+        }
+
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(7, 9, 16, 0.88);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 1.5rem;
+        }
+
+        .modal-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--accent-gold);
+            border-radius: 12px;
+            width: 100%;
+            max-width: 560px;
+            max-height: 85vh;
+            overflow-y: auto;
+            padding: 2rem;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1.2rem;
+            font-size: 1.8rem;
+            color: var(--text-muted);
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .modal-close:hover { color: var(--text-main); }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.3rem;
+            font-size: 0.88rem;
+            color: var(--text-main);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.75rem 0.9rem;
+            background: #0b0f19;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            color: var(--text-main);
+            font-size: 0.9rem;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+        }
+
+        #formStatus {
+            display: none;
+            margin-top: 1rem;
+            padding: 0.8rem;
+            text-align: center;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .status-success { background-color: rgba(34, 197, 94, 0.2); color: #4ade80; border: 1px solid #4ade80; }
+        .status-error { background-color: rgba(239, 68, 68, 0.2); color: #f87171; border: 1px solid #f87171; }
+
+        footer {
+            border-top: 1px solid var(--border-color);
+            padding: 3.5rem 5% 2rem 5%;
+            background-color: #070910;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            width: 100%;
+        }
+
+        .footer-content {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .footer-col h4 {
+            color: var(--text-main);
+            margin-bottom: 1rem;
+            font-size: 0.98rem;
+        }
+
+        .disclaimer {
+            max-width: 1300px;
+            margin: 0 auto;
+            border-top: 1px solid var(--border-color);
+            padding-top: 1.8rem;
+            font-size: 0.78rem;
+            text-align: justify;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .modal-card { padding: 1.5rem; }
+        }
     </style>
 </head>
 <body>
-    <a href="#main-content" class="skip-link">Salta al contenuto principale</a>
 
     <header>
-        <a href="#" class="brand-logo" aria-label="Stratos Global Holding - Home">
-            <svg class="logo-svg" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <circle cx="60" cy="60" r="58" stroke="#c5a059" stroke-width="2" fill="#0b0f19"/>
-                <circle cx="60" cy="60" r="54" stroke="#c5a059" stroke-width="1.5" fill="none"/>
-                <circle cx="60" cy="60" r="42" fill="#151f45" stroke="#c5a059" stroke-width="1.5"/>
-                <path d="M 20 60 Q 25 40 40 25 Q 45 30 42 40 Q 35 45 30 60 Q 35 75 42 80 Q 45 90 40 95 Q 25 80 20 60 Z" fill="#c5a059"/>
-                <path d="M 20 60 Q 25 55 35 50" stroke="#0b0f19" stroke-width="1"/>
-                <path d="M 22 50 Q 28 45 36 40" stroke="#0b0f19" stroke-width="1"/>
-                <path d="M 22 70 Q 28 75 36 80" stroke="#0b0f19" stroke-width="1"/>
-                <path d="M 100 60 Q 95 40 80 25 Q 75 30 78 40 Q 85 45 90 60 Q 85 75 78 80 Q 75 90 80 95 Q 95 80 100 60 Z" fill="#c5a059"/>
-                <path d="M 100 60 Q 95 55 85 50" stroke="#0b0f19" stroke-width="1"/>
-                <path d="M 98 50 Q 92 45 84 40" stroke="#0b0f19" stroke-width="1"/>
-                <path d="M 98 70 Q 92 75 84 80" stroke="#0b0f19" stroke-width="1"/>
-                <path id="textPathTop" d="M 25 60 A 35 35 0 0 1 95 60" fill="none"/>
-                <text font-family="Arial, sans-serif" font-size="7.5" font-weight="700" fill="#f8fafc" letter-spacing="1.5">
-                    <textPath href="#textPathTop" startOffset="50%" text-anchor="middle">STRATOS GLOBAL HOLDING - AZ</textPath>
-                </text>
-                <path id="textPathBottom" d="M 20 60 A 40 40 0 0 0 100 60" fill="none"/>
-                <text font-family="Arial, sans-serif" font-size="7.5" font-weight="700" fill="#f8fafc" letter-spacing="1.5">
-                    <textPath href="#textPathBottom" startOffset="50%" text-anchor="middle">AZ CONSULTING LLC</textPath>
-                </text>
-                <path d="M 42 80 L 55 40 L 60 40 L 73 80 L 66 80 L 63 70 L 52 70 L 49 80 Z M 54 64 L 61 64 L 57.5 50 Z" fill="#c5a059"/>
-                <path d="M 60 45 L 80 45 L 80 50 L 68 65 L 80 65 L 80 70 L 60 70 L 60 65 L 72 50 L 60 50 Z" fill="#c5a059"/>
-            </svg>
-            <div class="brand-text">STRATOS<span class="brand-sub">GLOBAL HOLDING AZ LLC</span></div>
-        </a>
-
-        <nav class="nav-desktop" aria-label="Navigazione principale">
-            <a href="#chi-siamo">Chi Siamo</a>
-            <a href="#servizi">Servizi</a>
-            <a href="#processo">Processo</a>
-            <a href="#risultati">Risultati</a>
-            <a href="#software">Software</a>
-            <a href="#contatti">Contatti</a>
-        </nav>
-
-        <button class="btn btn-primary" onclick="openModal('general')" style="padding:0.5rem 1.2rem;font-size:0.85rem;">Contattaci</button>
-        <button class="menu-toggle" onclick="toggleMobileMenu()" aria-label="Apri menu" aria-expanded="false" id="menuToggleBtn">☰</button>
+        <div class="brand-logo">
+            <div class="brand-text">STRATOS <span>GLOBAL HOLDING AZ LLC</span></div>
+        </div>
+        <button class="btn btn-primary" onclick="openModal('general')" style="padding: 0.5rem 1.2rem; font-size: 0.85rem;">Request Access</button>
     </header>
 
-    <nav class="nav-mobile" id="mobileMenu" aria-label="Navigazione mobile">
-        <a href="#chi-siamo" onclick="closeMobileMenu()">Chi Siamo</a>
-        <a href="#servizi" onclick="closeMobileMenu()">Servizi</a>
-        <a href="#processo" onclick="closeMobileMenu()">Processo</a>
-        <a href="#risultati" onclick="closeMobileMenu()">Risultati</a>
-        <a href="#software" onclick="closeMobileMenu()">Software</a>
-        <a href="#contatti" onclick="closeMobileMenu()">Contatti</a>
-    </nav>
+    <section class="hero">
+        <h1>Foodservice Engineering, Custom Kitchen Layouts & Integrated Systems</h1>
+        <p>Transforming over <span class="highlight-stat">36 years of operational culinary mastery</span> into high-yield business engineering: spatial optimization, Halal re-engineering of traditional Italian classics, and proprietary management technology. Target results: <span class="highlight-stat">4% to 8% OpEx reduction</span> in raw materials within the first 6 months, scaling to <span class="highlight-stat">30% to 40% long-term operational efficiency</span>.</p>
+        <div class="cta-group">
+            <button class="btn btn-primary" onclick="openModal('advisory')">Request Executive Consultation</button>
+            <a href="#software" class="btn btn-secondary">Explore Management System</a>
+        </div>
+    </section>
 
-    <main id="main-content">
-        <section class="hero">
-            <h1>Ingegneria per la Ristorazione, Layout di Cucina Personalizzati e Sistemi Integrati per la Scalabilità Globale</h1>
-            <p>Trasformiamo oltre <span class="highlight-stat">36 anni di maestria operativa culinaria</span> in ingegneria aziendale ad alto rendimento: ottimizzazione degli spazi, riprogettazione Halal dei classici italiani tradizionali e tecnologia gestionale proprietaria. Risultati target: <span class="highlight-stat">riduzione dei costi operativi dal 4% all'8%</span> in materie prime nei primi 6 mesi, fino a <span class="highlight-stat">un'efficienza operativa del 30%–40% nel lungo periodo</span>.</p>
-            <div class="cta-group">
-                <button class="btn btn-primary" onclick="openModal('advisory')">Richiedi una Consulenza Esecutiva</button>
-                <a href="#software" class="btn btn-secondary">Esplora il Sistema Gestionale</a>
+    <!-- SECTION 1: ABOUT US -->
+    <section class="section">
+        <h2 class="section-title">ABOUT US: FIELD-TESTED SOLUTIONS, NOT THEORETICAL ADVICE</h2>
+        <p class="section-subtitle">At Stratos Global, we deliver high-impact operational engineering rooted in over 36 years of active expertise across Italian gastronomy, pizzerias, regional concepts, and commercial foodservice enterprises.</p>
+        
+        <div class="grid-2">
+            <div class="card">
+                <h3>🛠️ Hands-On Kitchen Mastery</h3>
+                <p>We understand every square inch of commercial kitchens: from thermal load management to workflow logistics during peak hours. Our mission is to eliminate structural waste, streamline ergonomic layouts, and engineer profitable, effortless operations.</p>
             </div>
-        </section>
+            <div class="card">
+                <h3>🌐 Global Governance & Compliance</h3>
+                <p>Incorporated in the United States (Wyoming) and operating globally, we maintain rigorous corporate compliance, clear legal contracts, and multi-channel executive support across Middle Eastern (GCC), Central Asian, and European markets.</p>
+            </div>
+        </div>
+    </section>
 
-        <section class="section" id="chi-siamo">
-            <h2 class="section-title">CHI SIAMO: SOLUZIONI SUL CAMPO, NON CONSIGLI TEORICI</h2>
-            <p class="section-subtitle">In Stratos Global Holding AZ LLC offriamo ingegneria operativa ad alto impatto, radicata in oltre 36 anni di esperienza attiva nella gastronomia italiana, nelle pizzerie, nei concept regionali e nelle imprese commerciali della ristorazione.</p>
+    <!-- SECTION 2: KEY SERVICES -->
+    <section class="section" style="background-color: rgba(19, 27, 46, 0.3);">
+        <h2 class="section-title">CORE SERVICES & SOLUTIONS</h2>
+        <p class="section-subtitle">An end-to-end framework combining ergonomic kitchen layout engineering, Halal menu adaptation, and strict margin control.</p>
+        
+        <div class="grid-3">
+            <div class="card">
+                <h3>📐 1. Layout Design & Kitchen Engineering</h3>
+                <ul>
+                    <li><strong>Spatial Optimization:</strong> Blueprint re-engineering for hot kitchens, artisanal pizzerias, piadinerias, and beverage bars.</li>
+                    <li><strong>Lean Hardware Strategy:</strong> Identification and elimination of unnecessary machinery to reduce upfront CapEx and energy overheads.</li>
+                    <li><strong>Ergonomic Workflows:</strong> Seamless movement pathways between service staff and kitchen brigades to maximize output speed.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>🥩 2. Italian Heritage & Halal Re-Engineering</h3>
+                <ul>
+                    <li><strong>GCC & Islamic Market Compliance:</strong> Re-engineering iconic Italian culinary classics (traditional ragùs, lasagnas, arancini, artisanal doughs, and sauces) into 100% Halal-compliant formats without compromising authentic flavor or culinary identity.</li>
+                    <li><strong>Margin Engineering:</strong> Re-structuring menu engineering models to maximize gross profitability per plate and compress food costs.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>⚡ 3. Operational Problem Solving</h3>
+                <ul>
+                    <li><strong>Recipe Standardization:</strong> Implementation of strict yield guides and standardized operational procedures (SOPs).</li>
+                    <li><strong>Brigade Training:</strong> Hands-on staff training to eliminate raw material waste and streamline prep routines.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: MANAGEMENT SOFTWARE INTEGRATION -->
+    <section class="section" id="software">
+        <div class="software-box">
+            <h2 class="section-title" style="color: var(--accent-gold); margin-bottom: 0.5rem;">STRATOS POS & ECOSYSTEM</h2>
+            <p style="text-align: center; color: var(--text-main); font-size: 1.15rem; margin-bottom: 2rem;">Integrated Operational Core — Powered by Active Modular Systems</p>
+            <p style="text-align: center; color: var(--text-muted); max-width: 800px; margin: 0 auto 3rem auto;">We go beyond layout engineering: we provide a turn-key digital system tailored for restaurants, pizzerias, and foodservice operations to govern real-time performance without unnecessary hardware overheads.</p>
+            
             <div class="grid-2">
-                <div class="card"><h3>🛠️ Maestria Pratica in Cucina</h3><p>Conosciamo ogni centimetro delle cucine professionali: dalla gestione del carico termico alla logistica dei flussi di lavoro durante le ore di punta. La nostra missione è eliminare gli sprechi strutturali, razionalizzare i layout ergonomici e progettare operazioni redditizie e senza attriti.</p></div>
-                <div class="card"><h3>🌐 Governance e Conformità Globale</h3><p>Costituita negli Stati Uniti (Wyoming) e operativa a livello globale, manteniamo una rigorosa conformità aziendale, contratti legali chiari e un supporto esecutivo multicanale nei mercati del Medio Oriente (GCC), dell'Asia Centrale e dell'Europa.</p></div>
-            </div>
-        </section>
-
-        <section class="section" id="servizi" style="background-color:rgba(19,27,46,0.3);">
-            <h2 class="section-title">SERVIZI E SOLUZIONI PRINCIPALI</h2>
-            <p class="section-subtitle">Un framework end-to-end che combina ingegneria ergonomica del layout di cucina, adattamento Halal del menù e un rigoroso controllo dei margini.</p>
-            <div class="grid-3">
-                <div class="card"><h3>📐 1. Progettazione Layout e Ingegneria di Cucina</h3><ul><li><strong>Ottimizzazione degli Spazi:</strong> Riprogettazione delle planimetrie per cucine calde, pizzerie artigianali, piadinerie e beverage bar.</li><li><strong>Strategia Hardware Snella:</strong> Identificazione ed eliminazione delle attrezzature superflue per ridurre i costi iniziali (CapEx) e i consumi energetici.</li><li><strong>Flussi di Lavoro Ergonomici:</strong> Percorsi fluidi tra il personale di sala e le brigate di cucina per massimizzare la velocità produttiva.</li></ul></div>
-                <div class="card"><h3>🥩 2. Eccellenza Italiana e Riadattamento Halal</h3><ul><li><strong>Conformità GCC e Mercati Islamici:</strong> Riprogettazione dei classici della cucina italiana (ragù tradizionali, lasagne, arancini, impasti artigianali e salse) in formati 100% Halal, senza compromettere il sapore autentico o l'identità culinaria.</li><li><strong>Ingegneria dei Margini:</strong> Ristrutturazione dei modelli di menu engineering per massimizzare la redditività lorda per piatto e comprimere i costi alimentari.</li></ul></div>
-                <div class="card"><h3>⚡ 3. Risoluzione dei Problemi Operativi</h3><ul><li><strong>Standardizzazione delle Ricette:</strong> Implementazione di guide di resa rigorose e procedure operative standardizzate (SOP).</li><li><strong>Formazione delle Brigate:</strong> Formazione pratica del personale per eliminare gli sprechi di materie prime e razionalizzare le routine di preparazione.</li></ul></div>
-            </div>
-        </section>
-
-        <section class="section" id="processo">
-            <h2 class="section-title">COME LAVORIAMO</h2>
-            <p class="section-subtitle">Un metodo collaudato in cinque fasi per trasformare la tua visione in un'operazione efficiente e profittevole.</p>
-            <div class="grid-3">
-                <div class="process-step"><div class="step-num">1</div><h3>Discovery</h3><p>Analisi del concept, del target di mercato e degli obiettivi finanziari.</p></div>
-                <div class="process-step"><div class="step-num">2</div><h3>Audit Operativo</h3><p>Valutazione sul campo di spazi, attrezzature, flussi e criticità.</p></div>
-                <div class="process-step"><div class="step-num">3</div><h3>Design & Engineering</h3><p>Planimetrie, menu engineering, adattamento Halal e SOP.</p></div>
-                <div class="process-step"><div class="step-num">4</div><h3>Implementazione</h3><p>Formazione delle brigate, deployment del sistema POS e go-live.</p></div>
-                <div class="process-step"><div class="step-num">5</div><h3>Monitoraggio</h3><p>KPI, dashboard finanziarie e ottimizzazione continua dei margini.</p></div>
-                <div class="process-step"><div class="step-num">✓</div><h3>Risultati</h3><p>Riduzione dei costi, aumento dell'efficienza e scalabilità globale.</p></div>
-            </div>
-        </section>
-
-        <!-- RISULTATI / CASE STUDY ANONIMI -->
-        <section class="section" id="risultati">
-            <h2 class="section-title">RISULTATI COMPROVATI SUL CAMPO</h2>
-            <p class="section-subtitle">Interventi reali su catene e indipendenti. Per accordi di riservatezza (NDA), i nomi dei clienti e le località specifiche non vengono resi pubblici.</p>
-            
-            <div class="grid-3">
-                <div class="card">
-                    <span class="case-badge">Area GCC</span>
-                    <div class="case-metric">-7% <span>sprechi</span></div>
-                    <h3>Catena di Ristoranti Italiani</h3>
-                    <p>Riprogettazione completa del menu Halal e ottimizzazione dei flussi di cucina per un'importante catena alberghiera e di ristorazione nell'area del Golfo. Riduzione drastica degli sprechi in 5 mesi.</p>
+                <div class="card" style="background: rgba(11, 15, 25, 0.6);">
+                    <h3>📱 Seamless Floor-to-Kitchen Routing</h3>
+                    <p>Floor staff record orders on mobile devices or tablets. Orders instantly display on dedicated Kitchen Display System (KDS) screens across prep stations (hot line, pizzeria, bar).</p>
                 </div>
-                <div class="card">
-                    <span class="case-badge">Sud-Est Asiatico</span>
-                    <div class="case-metric">+22% <span>efficienza</span></div>
-                    <h3>Catena di Pizzerie</h3>
-                    <p>Adattamento Halal rigoroso (mercati ad alta ortodossia) e ristrutturazione ergonomica delle postazioni di lavoro. Aumento della produttività e riduzione dei tempi di servizio.</p>
+                <div class="card" style="background: rgba(11, 15, 25, 0.6);">
+                    <h3>📦 Real-Time Inventory Control</h3>
+                    <p>Every item sold automatically deducts exact raw materials from live inventory, triggering automated low-stock reorder alerts before stockouts occur.</p>
                 </div>
-                <div class="card">
-                    <span class="case-badge">Asia Centrale</span>
-                    <div class="case-metric">+15% <span>margine lordo</span></div>
-                    <h3>Pizzeria e Ristorante Italiano</h3>
-                    <p>Audit operativo e implementazione di SOP per una pizzeria indipendente. Standardizzazione delle ricette e controllo rigoroso delle porzioni per massimizzare la redditività per piatto.</p>
+                <div class="card" style="background: rgba(11, 15, 25, 0.6);">
+                    <h3>📊 Financial Dashboard & Analytics</h3>
+                    <p>Monitor revenue, net margins, and daily labor/OpEx costs anytime from any desktop or mobile interface.</p>
+                </div>
+                <div class="card" style="background: rgba(11, 15, 25, 0.6);">
+                    <h3>💳 Integrated Checkout & Table Management</h3>
+                    <p>Accelerate table turnover, split bills, and execute daily cash register reconciliations with zero human error.</p>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="privacy-note">
-                <strong>🔒 Riservatezza Garantita (NDA):</strong> Operiamo nel massimo riserbo. I nomi dei nostri clienti, le città specifiche e i dati sensibili non vengono divulgati per tutelare la loro immagine e i loro segreti commerciali. Tutti i risultati sono documentati e verificabili durante la fase di pre-qualifica.
+    <!-- SECTION 4: WHY CHOOSE STRATOS GLOBAL HOLDING -->
+    <section class="section">
+        <h2 class="section-title">WHY PARTNER WITH STRATOS GLOBAL</h2>
+        <p class="section-subtitle">A single strategic holding partner handling your expansion from blueprint design to software deployment.</p>
+        <div class="grid-3" style="margin-bottom: 4rem;">
+            <div class="card">
+                <h3>✔️ Proven Track Record</h3>
+                <p>Decades of practical floor, pizzeria, and kitchen execution rather than theoretical management models.</p>
             </div>
-        </section>
-
-        <section class="section" id="software">
-            <div class="software-box">
-                <h2 class="section-title" style="color:var(--accent-gold);margin-bottom:0.5rem;">STRATOS POS ED ECOSISTEMA</h2>
-                <p style="text-align:center;color:var(--text-main);font-size:1.15rem;margin-bottom:2rem;">Nucleo Operativo Integrato — Alimentato da Sistemi Modulari Attivi</p>
-                <p style="text-align:center;color:var(--text-muted);max-width:800px;margin:0 auto 3rem auto;">Andiamo oltre l'ingegneria dei layout: forniamo un sistema digitale chiavi in mano, pensato per ristoranti, pizzerie e attività di ristorazione, per governare le performance in tempo reale senza costi hardware superflui.</p>
-                <div class="grid-2">
-                    <div class="card" style="background:rgba(11,15,25,0.6);"><h3>📱 Instradamento Fluido Sala-Cucina</h3><p>Il personale di sala registra gli ordini su dispositivi mobili o tablet. Gli ordini vengono visualizzati istantaneamente su schermi dedicati Kitchen Display System (KDS) nelle varie postazioni (linea calda, pizzeria, bar).</p></div>
-                    <div class="card" style="background:rgba(11,15,25,0.6);"><h3>📦 Controllo delle Scorte in Tempo Reale</h3><p>Ogni articolo venduto scala automaticamente le materie prime esatte dall'inventario live, attivando avvisi automatici di riordino prima che si verifichino rotture di stock.</p></div>
-                    <div class="card" style="background:rgba(11,15,25,0.6);"><h3>📊 Dashboard Finanziaria e Analisi</h3><p>Monitora ricavi, margini netti e costi giornalieri di manodopera e OpEx in qualsiasi momento, da qualsiasi interfaccia desktop o mobile.</p></div>
-                    <div class="card" style="background:rgba(11,15,25,0.6);"><h3>💳 Cassa Integrata e Gestione Tavoli</h3><p>Accelera la rotazione dei tavoli, dividi i conti ed esegui le riconciliazioni giornaliere di cassa senza alcun errore umano.</p></div>
-                </div>
+            <div class="card">
+                <h3>🌍 Cross-Border Execution</h3>
+                <p>Direct negotiation capability across Middle Eastern, Central Asian, and European business landscapes.</p>
             </div>
-        </section>
-
-        <section class="section" id="contatti">
-            <h2 class="section-title">PERCHÉ SCEGLIERE STRATOS GLOBAL HOLDING</h2>
-            <p class="section-subtitle">Un unico partner strategico che gestisce la tua espansione dalla progettazione del layout al deployment del software.</p>
-            <div class="grid-3" style="margin-bottom:4rem;">
-                <div class="card"><h3>✔️ Track Record Comprovato</h3><p>Decenni di esecuzione pratica in sala, in pizzeria e in cucina, non modelli gestionali teorici.</p></div>
-                <div class="card"><h3>🌍 Esecuzione Transfrontaliera</h3><p>Capacità di negoziazione diretta nei panorami imprenditoriali del Medio Oriente, dell'Asia Centrale e dell'Europa.</p></div>
-                <div class="card"><h3>⚡ Soluzione Unificata</h3><p>Dalla disposizione degli elettrodomestici in cucina all'architettura software di cassa, forniamo soluzioni chiavi in mano.</p></div>
+            <div class="card">
+                <h3>🔑 Turn-Key Solutions</h3>
+                <p>End-to-end project management covering kitchen layouts, menu engineering, and digital infrastructure under one umbrella.</p>
             </div>
+        </div>
 
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h3 style="color:var(--accent-gold);margin-bottom:1rem;font-size:1.4rem;">Informazioni Operative</h3>
-                    <p><strong>Società:</strong> Stratos Global Holding AZ LLC</p>
-                    <p><strong>Sede Legale:</strong> 30 N Gould St Ste R, Sheridan, WY 82801, USA</p>
-                    <p><strong>Telefono:</strong> <a href="tel:+13074359760">+1 (307) 435 9760</a></p>
-                    <p><strong>Email Esecutiva:</strong> <a href="mailto:contact@azstratosholding.com">contact@azstratosholding.com</a></p>
-                    <p><strong>Ambito di Operatività:</strong> GCC, Asia Centrale, Europa</p>
-                    <div class="direct-links">
-                        <a href="mailto:contact@azstratosholding.com">Invia Email Diretta</a>
-                        <a href="tel:+13074359760">Chiama Subito</a>
-                        <button class="btn btn-primary" onclick="openModal('general')" style="padding:0.6rem 1rem;font-size:0.85rem;">Portale Messaggi</button>
-                    </div>
-                </div>
-                <div>
-                    <div class="card" style="border-color:var(--accent-gold);">
-                        <h3 style="margin-bottom:0.5rem;">Sessione Intake Esecutiva</h3>
-                        <p style="font-size:0.9rem;margin-bottom:1.5rem;">Invia una richiesta direttamente al nostro team di ingegneria per valutare il tuo concept o l'ottimizzazione del tuo locale.</p>
-                        <button class="btn btn-primary" style="width:100%" onclick="openModal('advisory')">Apri Modulo di Contatto</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+        <!-- CALL TO ACTION BANNER -->
+        <div style="background: var(--card-bg); border: 1px solid var(--accent-gold); border-radius: 12px; padding: 3rem 2rem; text-align: center;">
+            <h2 style="font-size: 1.8rem; margin-bottom: 1rem;">Access the Executive Intake Portal</h2>
+            <p style="color: var(--text-muted); max-width: 700px; margin: 0 auto 2rem auto;">To ensure maximum operational commitment, we evaluate all incoming client proposals through a strict ROI pre-qualification process before initiating detailed audits.</p>
+            <button class="btn btn-primary" onclick="openModal('general')">Begin Pre-Qualification Process</button>
+        </div>
+    </section>
 
-    <!-- MODALE WEB3FORMS CONFIGURATO -->
-    <div class="modal-overlay" id="contactModal">
+    <!-- POP-UP MODAL (EXECUTIVE INTAKE PORTAL) -->
+    <div class="modal-overlay" id="intakeModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
         <div class="modal-card">
-            <button class="modal-close" onclick="closeModal()">&times;</button>
-            <h3 id="modalTitle" style="color:var(--accent-gold);margin-bottom:0.3rem;">Portale di Contatto Esecutivo</h3>
-            <p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:1.2rem;">Risposta garantita entro 24-48 ore lavorative.</p>
+            <button class="modal-close" onclick="closeModal()" aria-label="Close modal">&times;</button>
+            <h3 id="modalTitle" style="color: var(--accent-gold); margin-bottom: 0.3rem; font-size: 1.3rem;">STRATOS GLOBAL</h3>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1.2rem;">Executive Intake & Departmental Routing Portal</p>
             
-            <form id="routingForm" action="https://api.web3forms.com/submit" method="POST">
+            <form id="routingForm" onsubmit="handleFormSubmit(event)">
+                <!-- Web3Forms Key -->
                 <input type="hidden" name="access_key" value="cf5240a3-364d-45e6-b82f-ecab33b1e3f5">
-                <input type="hidden" name="_next" value="https://ziad62b-spec.github.io/STRATOS/">
                 
                 <div class="form-group">
-                    <label for="deptSelect">Dipartimento Target</label>
+                    <label for="deptSelect">Target Department</label>
                     <select id="deptSelect" name="Department" class="form-control" required>
-                        <option value="advisory">Consulenza Esecutiva & Ingegneria di Cucina</option>
-                        <option value="software">Sistemi Software POS & KDS</option>
-                        <option value="halal">Riadattamento Menù Halal & GCC</option>
-                        <option value="general">Informazioni Generali</option>
+                        <option value="advisory">Executive Advisory & Kitchen Engineering</option>
+                        <option value="legal">Legal & Corporate Compliance</option>
+                        <option value="tech">Tech & Operations Support</option>
+                        <option value="general">General Governance & Inquiries</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="fullName">Nome Completo *</label>
-                    <input type="text" id="fullName" name="Name" class="form-control" placeholder="es. Mario Rossi" required>
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="Name" class="form-control" placeholder="e.g. John Smith" required>
                 </div>
                 <div class="form-group">
-                    <label for="companyName">Azienda / Brand</label>
-                    <input type="text" id="companyName" name="Company" class="form-control" placeholder="es. Rossi Restaurant Group">
+                    <label for="company">Company & Brand Name</label>
+                    <input type="text" id="company" name="Company" class="form-control" placeholder="e.g. Global Restaurant Group LLC" required>
                 </div>
                 <div class="form-group">
-                    <label for="emailAddr">Email Aziendale *</label>
-                    <input type="email" id="emailAddr" name="email" class="form-control" placeholder="es. mario@azienda.com" required>
+                    <label for="userEmail">Corporate Email Address</label>
+                    <input type="email" id="userEmail" name="Email" class="form-control" placeholder="name@company.com" required>
                 </div>
                 <div class="form-group">
-                    <label for="msgBody">Dettagli del Progetto / Richiesta *</label>
-                    <textarea id="msgBody" name="Message" class="form-control" rows="4" placeholder="Descrivi brevemente la tua struttura o le tue esigenze..." required></textarea>
+                    <label for="message">Project Overview</label>
+                    <textarea id="message" name="Message" class="form-control" rows="2" placeholder="Briefly describe your project, target region (e.g. GCC, Europe), and planned timeline..." required></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary" style="width:100%;margin-top:0.5rem;">Invia Messaggio Esecutivo</button>
+                
+                <button type="submit" id="submitBtn" class="btn btn-primary" style="width: 100%; margin-top: 0.8rem; padding: 0.8rem;">Submit Pre-Qualification Request</button>
+                
+                <!-- Messaggio di stato per l'utente -->
+                <div id="formStatus"></div>
             </form>
         </div>
     </div>
@@ -313,56 +534,113 @@
     <footer>
         <div class="footer-content">
             <div class="footer-col">
-                <h4 style="color:var(--accent-gold);">Stratos Global Holding AZ LLC</h4>
-                <p>Ingegneria per la Ristorazione, Layout di Cucina e Software POS Integrati per Imprese della Ristorazione a Livello Globale.</p>
+                <h4>STRATOS GLOBAL HOLDING AZ LLC</h4>
+                <p>Wyoming, USA<br>Filing ID: 2026-002018898<br>Federal EIN: 32-0862603</p>
             </div>
             <div class="footer-col">
-                <h4>Navigazione Rapida</h4>
-                <p><a href="#chi-siamo">Chi Siamo</a></p>
-                <p><a href="#servizi">Servizi & Soluzioni</a></p>
-                <p><a href="#risultati">Risultati & Case Studies</a></p>
-                <p><a href="#software">Stratos POS System</a></p>
+                <h4>Registered Agent</h4>
+                <p>% BEST WYOMING REGISTERED AGENT LLC<br>30 N Gould St Ste B<br>Sheridan, WY 82801, USA</p>
             </div>
             <div class="footer-col">
-                <h4>Contatti Diretti</h4>
-                <p>Telefono: <a href="tel:+13074359760">+1 (307) 435 9760</a></p>
-                <p>Email: <a href="mailto:contact@azstratosholding.com">contact@azstratosholding.com</a></p>
-                <p>Wyoming Company Reg: Sheridan, WY, USA</p>
+                <h4>Departments & Direct Emails</h4>
+                <p>
+                    Legal: legal@azstratosholding.com<br>
+                    Advisory: advisory@azstratosholding.com<br>
+                    Tech: tech@azstratosholding.com<br>
+                    General: contact@azstratosholding.com
+                </p>
             </div>
-        </div>
-        <div class="footer-legal-links">
-            <span>© Stratos Global Holding AZ LLC. Tutti i diritti riservati.</span>
+            <div class="footer-col">
+                <h4>Executive Telephone System</h4>
+                <p>Phone: +1 (307) 435 9760<br>Guaranteed callback within <strong>24 to 48 business hours</strong>.</p>
+            </div>
         </div>
         <div class="disclaimer">
-            <p>Le informazioni fornite su questo sito web hanno scopo puramente informativo e non costituiscono un'offerta vincolante di consulenza finanziaria o di investimento. Le stime di efficienza e i margini operativi si basano su analisi storiche e possono variare a seconda del contesto di mercato e dell'esecuzione sul campo.</p>
+            <strong>Legal Disclaimer:</strong> All analytical reports, software outputs, and strategic recommendations provided by STRATOS GLOBAL HOLDING AZ LLC serve as high-level managerial and operational guidance. Final local regulatory compliance, structural permits, and municipal or health department authorizations remain the sole responsibility of the Client, who must engage certified local professionals.
         </div>
     </footer>
 
     <script>
-        function toggleMobileMenu(){
-            const m = document.getElementById('mobileMenu');
-            const btn = document.getElementById('menuToggleBtn');
-            m.classList.toggle('open');
-            const open = m.classList.contains('open');
-            btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        // Chiusura con tasto ESC
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        function openModal(defaultDept) {
+            document.getElementById('intakeModal').style.display = 'flex';
+            if(defaultDept) {
+                document.getElementById('deptSelect').value = defaultDept;
+            }
+            // Reset form status
+            document.getElementById('formStatus').style.display = 'none';
+            document.getElementById('formStatus').className = '';
+            document.getElementById('routingForm').reset();
+            if(defaultDept) {
+                document.getElementById('deptSelect').value = defaultDept;
+            }
         }
-        function closeMobileMenu(){
-            document.getElementById('mobileMenu').classList.remove('open');
-            document.getElementById('menuToggleBtn').setAttribute('aria-expanded', 'false');
+
+        function closeModal() {
+            document.getElementById('intakeModal').style.display = 'none';
         }
-        function openModal(dept){
-            const modal = document.getElementById('contactModal');
-            const sel = document.getElementById('deptSelect');
-            if(dept && sel){ sel.value = dept; }
-            modal.classList.add('active');
-        }
-        function closeModal(){
-            document.getElementById('contactModal').classList.remove('active');
-        }
+
         window.onclick = function(event) {
-            const modal = document.getElementById('contactModal');
+            var modal = document.getElementById('intakeModal');
             if (event.target == modal) {
                 closeModal();
+            }
+        }
+
+        async function handleFormSubmit(e) {
+            e.preventDefault();
+            
+            var form = document.getElementById('routingForm');
+            var submitBtn = document.getElementById('submitBtn');
+            var statusDiv = document.getElementById('formStatus');
+            var formData = new FormData(form);
+
+            // UI: Stato di caricamento
+            submitBtn.disabled = true;
+            submitBtn.innerText = "Invio in corso...";
+            statusDiv.style.display = 'none';
+
+            try {
+                var response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                var data = await response.json();
+
+                if (data.success) {
+                    // Successo
+                    statusDiv.style.display = 'block';
+                    statusDiv.className = 'status-success';
+                    statusDiv.innerText = "Richiesta inviata con successo! Ti ricontatteremo entro 24-48 ore.";
+                    
+                    form.reset();
+                    
+                    // Chiudi la modale dopo 3 secondi
+                    setTimeout(function() {
+                        closeModal();
+                        statusDiv.style.display = 'none';
+                    }, 3000);
+                } else {
+                    // Errore dal server
+                    throw new Error(data.message || "Errore durante l'invio.");
+                }
+            } catch (error) {
+                // Errore di rete o altro
+                statusDiv.style.display = 'block';
+                statusDiv.className = 'status-error';
+                statusDiv.innerText = "Si è verificato un errore. Riprova o contattaci via email.";
+                console.error(error);
+            } finally {
+                // Ripristina il bottone in ogni caso
+                submitBtn.disabled = false;
+                submitBtn.innerText = "Submit Pre-Qualification Request";
             }
         }
     </script>
