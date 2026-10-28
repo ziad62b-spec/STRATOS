@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stratos Global | Foodservice Engineering & Operations</title>
+    <title>Stratos Global Holding AZ LLC | Foodservice Engineering & Operations</title>
     
     <!-- SEO & Open Graph -->
     <meta name="description" content="Foodservice engineering, custom kitchen layouts, and Halal re-engineering for global scaling. 36 years of operational mastery.">
@@ -72,25 +72,29 @@
             font-weight: 600;
         }
 
+        /* SFONDO HERO TECNICO E SFUMATO */
         .hero {
             position: relative;
             padding: 7rem 5% 5rem 5%;
             text-align: center;
             max-width: 1200px;
             margin: 0 auto;
+            background: radial-gradient(circle at top center, rgba(197, 160, 89, 0.08) 0%, rgba(11, 15, 25, 0) 70%);
         }
 
-        /* Immagine di sfondo sfocata per l'hero */
+        /* Griglia tecnica sullo sfondo */
         .hero::before {
             content: "";
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background-image: url('https://images.unsplash.com/photo-1556910103-1c02745a872f?q=80&w=2070&auto=format&fit=crop');
-            background-size: cover;
-            background-position: center;
-            filter: blur(8px) brightness(0.2);
+            background-image: 
+                linear-gradient(rgba(30, 41, 59, 0.3) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(30, 41, 59, 0.3) 1px, transparent 1px);
+            background-size: 40px 40px;
             z-index: -1;
-            border-radius: 0 0 20px 20px;
+            mask-image: linear-gradient(to bottom, black 20%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 20%, transparent 100%);
+            pointer-events: none;
         }
 
         .hero h1 {
@@ -350,6 +354,15 @@
             font-size: 0.98rem;
         }
 
+        /* TELEFONO IN ORO NEL FOOTER */
+        .gold-phone {
+            color: var(--accent-gold);
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+
         .disclaimer {
             max-width: 1300px;
             margin: 0 auto;
@@ -552,7 +565,9 @@
             </div>
             <div class="footer-col">
                 <h4>Executive Telephone System</h4>
-                <p>Phone: +1 (307) 435 9760<br>Guaranteed callback within <strong>24 to 48 business hours</strong>.</p>
+                <!-- TELEFONO IN ORO -->
+                <p class="gold-phone">+1 (307) 435 9760</p>
+                <p>Guaranteed callback within <strong>24 to 48 business hours</strong>.</p>
             </div>
         </div>
         <div class="disclaimer">
@@ -570,13 +585,13 @@
 
         function openModal(defaultDept) {
             document.getElementById('intakeModal').style.display = 'flex';
-            if(defaultDept) {
-                document.getElementById('deptSelect').value = defaultDept;
-            }
+            
             // Reset form status
             document.getElementById('formStatus').style.display = 'none';
             document.getElementById('formStatus').className = '';
             document.getElementById('routingForm').reset();
+            
+            // Se c'è un reparto pre-selezionato, rimettilo
             if(defaultDept) {
                 document.getElementById('deptSelect').value = defaultDept;
             }
