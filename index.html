@@ -4,13 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stratos Global Holding AZ LLC | Foodservice Engineering & Operations</title>
-    
-    <!-- SEO & Open Graph -->
-    <meta name="description" content="Foodservice engineering, custom kitchen layouts, and Halal re-engineering for global scaling.">
-    <meta property="og:title" content="Stratos Global | Foodservice Engineering & Operations">
-    <meta property="og:description" content="Transforming 36 years of culinary mastery into high-yield business engineering.">
-    <meta property="og:type" content="website">
-
     <style>
         :root {
             --bg-color: #0b0f19;
@@ -20,10 +13,6 @@
             --text-main: #f8fafc;
             --text-muted: #94a3b8;
             --border-color: #1e293b;
-        }
-
-        html {
-            scroll-behavior: smooth;
         }
 
         * {
@@ -75,6 +64,7 @@
             font-weight: 600;
         }
 
+        /* SFONDO HERO CON IMMAGINE SFOCATA */
         .hero {
             position: relative;
             padding: 6rem 5% 4rem 5%;
@@ -91,9 +81,10 @@
             background-image: url('https://images.unsplash.com/photo-1556910103-1c02745a872f?q=80&w=2070&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
-            filter: blur(5px) brightness(0.25);
+            filter: blur(6px) brightness(0.2);
             z-index: -1;
-            border-bottom: 1px solid var(--border-color);
+            border-radius: 0 0 20px 20px;
+            pointer-events: none;
         }
 
         .hero h1 {
@@ -315,19 +306,6 @@
             border-color: var(--accent-gold);
         }
 
-        #formStatus {
-            display: none;
-            margin-top: 1rem;
-            padding: 0.8rem;
-            text-align: center;
-            border-radius: 4px;
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
-
-        .status-success { background-color: rgba(34, 197, 94, 0.2); color: #4ade80; border: 1px solid #4ade80; }
-        .status-error { background-color: rgba(239, 68, 68, 0.2); color: #f87171; border: 1px solid #f87171; }
-
         footer {
             border-top: 1px solid var(--border-color);
             padding: 3.5rem 5% 2rem 5%;
@@ -352,25 +330,6 @@
             font-size: 0.98rem;
         }
 
-        .footer-col a {
-            color: var(--accent-gold);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-col a:hover {
-            color: var(--accent-gold-hover);
-            text-decoration: underline;
-        }
-
-        .gold-phone {
-            color: var(--accent-gold);
-            font-weight: 700;
-            font-size: 1.1rem;
-            display: inline-block;
-            margin-bottom: 0.5rem;
-        }
-
         .disclaimer {
             max-width: 1300px;
             margin: 0 auto;
@@ -389,15 +348,17 @@
 </head>
 <body>
 
-    <!-- HEADER CON LOGO ORIGINALE -->
     <header>
         <div class="brand-logo">
+            <!-- ICONA DORATA AGGIUNTA AL LOGO -->
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
             <div class="brand-text">STRATOS <span>GLOBAL HOLDING AZ LLC</span></div>
         </div>
-        <button class="btn btn-primary" onclick="openModal('general')" style="padding: 0.5rem 1.2rem; font-size: 0.85rem;" aria-label="Request Access">Request Access</button>
+        <button class="btn btn-primary" onclick="openModal('general')" style="padding: 0.5rem 1.2rem; font-size: 0.85rem;">Request Access</button>
     </header>
 
-    <!-- HERO CON SFONDO -->
     <section class="hero">
         <h1>Foodservice Engineering, Custom Kitchen Layouts & Integrated Systems for Global Scaling</h1>
         <p>Transforming over <span class="highlight-stat">36 years of operational culinary mastery</span> into high-yield business engineering: spatial optimization, Halal re-engineering of traditional Italian classics, and proprietary management technology. Target results: <span class="highlight-stat">4% to 8% OpEx reduction</span> in raw materials within the first 6 months, scaling to <span class="highlight-stat">30% to 40% long-term operational efficiency</span>.</p>
@@ -510,17 +471,16 @@
         </div>
     </section>
 
-    <!-- POP-UP MODAL -->
+    <!-- POP-UP MODAL (EXECUTIVE INTAKE PORTAL) -->
     <div class="modal-overlay" id="intakeModal">
         <div class="modal-card">
-            <button class="modal-close" onclick="closeModal()" aria-label="Close modal">&times;</button>
+            <button class="modal-close" onclick="closeModal()">&times;</button>
             <h3 style="color: var(--accent-gold); margin-bottom: 0.3rem; font-size: 1.3rem;">STRATOS GLOBAL HOLDING</h3>
             <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1.2rem;">Executive Intake & Departmental Routing Portal</p>
             
             <form id="routingForm" onsubmit="handleFormSubmit(event)">
+                <!-- CHIAVE WEB3FORMS ATTIVA -->
                 <input type="hidden" name="access_key" value="cf5240a3-364d-45e6-b82f-ecab33b1e3f5">
-                <!-- Honeypot Antispam -->
-                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                 
                 <div class="form-group">
                     <label for="deptSelect">Target Department</label>
@@ -547,14 +507,12 @@
                     <label for="message">Project Overview</label>
                     <textarea id="message" name="Message" class="form-control" rows="2" placeholder="Briefly describe your project, target region (e.g. GCC, Europe), and planned timeline..." required></textarea>
                 </div>
-                
                 <button type="submit" id="submitBtn" class="btn btn-primary" style="width: 100%; margin-top: 0.8rem; padding: 0.8rem;">Submit Pre-Qualification Request</button>
-                <div id="formStatus"></div>
+                <div id="formStatus" style="display:none; margin-top:1rem; text-align:center; font-weight:600;"></div>
             </form>
         </div>
     </div>
 
-    <!-- FOOTER CON TELEFONO ED EMAIL DORATI -->
     <footer>
         <div class="footer-content">
             <div class="footer-col">
@@ -568,16 +526,15 @@
             <div class="footer-col">
                 <h4>Departments & Direct Emails</h4>
                 <p>
-                    Legal: <a href="mailto:legal@azstratosholding.com">legal@azstratosholding.com</a><br>
-                    Advisory: <a href="mailto:advisory@azstratosholding.com">advisory@azstratosholding.com</a><br>
-                    Tech: <a href="mailto:tech@azstratosholding.com">tech@azstratosholding.com</a><br>
-                    General: <a href="mailto:contact@azstratosholding.com">contact@azstratosholding.com</a>
+                    Legal: legal@azstratosholding.com<br>
+                    Advisory: advisory@azstratosholding.com<br>
+                    Tech: tech@azstratosholding.com<br>
+                    General: contact@azstratosholding.com
                 </p>
             </div>
             <div class="footer-col">
                 <h4>Executive Telephone System</h4>
-                <p class="gold-phone">+1 (307) 435 9760</p>
-                <p>Guaranteed callback within <strong>24 to 48 business hours</strong>.</p>
+                <p>Phone: +1 (307) 435 9760<br>Guaranteed callback within <strong>24 to 48 business hours</strong>.</p>
             </div>
         </div>
         <div class="disclaimer">
@@ -591,19 +548,11 @@
             if(defaultDept) {
                 document.getElementById('deptSelect').value = defaultDept;
             }
-            document.getElementById('formStatus').style.display = 'none';
-            document.getElementById('formStatus').className = '';
         }
 
         function closeModal() {
             document.getElementById('intakeModal').style.display = 'none';
         }
-
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                closeModal();
-            }
-        });
 
         window.onclick = function(event) {
             var modal = document.getElementById('intakeModal');
@@ -614,7 +563,6 @@
 
         async function handleFormSubmit(e) {
             e.preventDefault();
-            
             var form = document.getElementById('routingForm');
             var submitBtn = document.getElementById('submitBtn');
             var statusDiv = document.getElementById('formStatus');
@@ -629,27 +577,24 @@
                     method: 'POST',
                     body: formData
                 });
-
                 var data = await response.json();
 
                 if (data.success) {
                     statusDiv.style.display = 'block';
-                    statusDiv.className = 'status-success';
-                    statusDiv.innerText = "Richiesta inviata con successo! Ti ricontatteremo entro 24-48 ore.";
+                    statusDiv.style.color = '#4ade80';
+                    statusDiv.innerText = "Richiesta inviata con successo!";
                     form.reset();
-                    
                     setTimeout(function() {
                         closeModal();
                         statusDiv.style.display = 'none';
                     }, 3000);
                 } else {
-                    throw new Error(data.message || "Errore durante l'invio.");
+                    throw new Error("Errore server");
                 }
             } catch (error) {
                 statusDiv.style.display = 'block';
-                statusDiv.className = 'status-error';
-                statusDiv.innerText = "Si è verificato un errore. Riprova o contattaci via email.";
-                console.error(error);
+                statusDiv.style.color = '#f87171';
+                statusDiv.innerText = "Errore durante l'invio. Riprova.";
             } finally {
                 submitBtn.disabled = false;
                 submitBtn.innerText = "Submit Pre-Qualification Request";
