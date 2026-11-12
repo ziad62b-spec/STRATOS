@@ -290,4 +290,82 @@
                         <option value="halal">Halal Menu Adaptation & GCC Expansion</option>
                         <option value="general">General Executive Inquiry</option>
                     </select>
-                </div
+                </div>
+                <div class="form-group">
+                    <label for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" name="Name" class="form-control" placeholder="e.g. John Smith" required>
+                </div>
+                <div class="form-group">
+                    <label for="companyName">Company / Brand Name</label>
+                    <input type="text" id="companyName" name="Company" class="form-control" placeholder="e.g. Smith Hospitality Group">
+                </div>
+                <div class="form-group">
+                    <label for="emailAddr">Corporate Email *</label>
+                    <input type="email" id="emailAddr" name="email" class="form-control" placeholder="e.g. john@company.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="msgBody">Project Overview / Requirements *</label>
+                    <textarea id="msgBody" name="Message" class="form-control" rows="4" placeholder="Briefly describe your concept, operational challenge, or scaling requirements..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width:100%;margin-top:0.5rem;">Submit Executive Inquiry</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4 style="color:var(--accent-gold);">Stratos Global Holding AZ LLC</h4>
+                <p>Foodservice Engineering, Kitchen Layout Optimization, Independent CAPEX Management, and Proprietary POS Systems for Global Hospitality Operators.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Navigation</h4>
+                <p><a href="#about">About Us</a></p>
+                <p><a href="#services">Services & Solutions</a></p>
+                <p><a href="#results">Track Record</a></p>
+                <p><a href="#software">Stratos POS Ecosystem</a></p>
+            </div>
+            <div class="footer-col">
+                <h4>General Contact</h4>
+                <p><strong>Email:</strong> <a href="mailto:contact@azstratosholding.com">contact@azstratosholding.com</a></p>
+                <p><strong>Website:</strong> <a href="https://www.azstratosholding.com/" target="_blank" rel="noopener noreferrer">www.azstratosholding.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const btn = document.getElementById('menuToggleBtn');
+            const isOpen = menu.classList.toggle('open');
+            btn.setAttribute('aria-expanded', isOpen);
+        }
+        function closeMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const btn = document.getElementById('menuToggleBtn');
+            menu.classList.remove('open');
+            btn.setAttribute('aria-expanded', 'false');
+        }
+        function openModal(dept) {
+            const modal = document.getElementById('contactModal');
+            const select = document.getElementById('deptSelect');
+            if(dept && select) {
+                select.value = dept;
+            }
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal() {
+            const modal = document.getElementById('contactModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        window.onclick = function(event) {
+            const modal = document.getElementById('contactModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
